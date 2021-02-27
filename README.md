@@ -1,12 +1,13 @@
 # Base - Backend Express (Node)
 Base Project for generating Backend APIs using Nodejs and Express.
 
-## Main Features
-- HTTP server middleware management
-- MongoDB simple database
-- CRUD for users
+### Branches
+- `main` - Most basic version.
+- `db` - Version adding `mongodb` database management.
+- `auth` - Version adding basic `auth` management.
 
-## Secondary Features
+### Base Features
+- HTTP server middleware management
 - CORS Validation
 - Error Handling
 - Constants Management
