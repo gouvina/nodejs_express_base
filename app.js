@@ -1,20 +1,39 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// Global Environment Variables
+require('dotenv').config();
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// Global dependencies
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
 
-var app = express();
+// Local dependencies
+const routes = require('./constants/routes');
+const usersRouter = require('./routes/users');
+const { CORS_ORIGIN_WHITELIST, DATABASE_URL } = require('./config');
 
+// CORS options
+const corsOptions = {
+    origin(origin, callback) {
+      if (CORS_ORIGIN_WHITELIST.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  };
+
+// Express app rules
+const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors(corsOptions));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Routes
+app.use(routes.USERS, usersRouter);
 
 module.exports = app;
