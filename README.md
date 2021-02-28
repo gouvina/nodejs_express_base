@@ -20,6 +20,8 @@ This version of the base project supports the next features:
 ## Requirements
 In order to run the project, it is needed to have downloaded and installed the following software:
 - Node.js - https://nodejs.org/en/download/
+- Nodemon - `npm install -g nodemon` <br>
+(recommended, for debugging)
 
 ## Setup & Run
 In order to run the project, it is needed to follow the next steps, taking into account they are designed to run the project *locally*. URL's should change otherwise:
