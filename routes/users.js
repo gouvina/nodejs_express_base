@@ -1,6 +1,8 @@
+// Third-party dependencies
 const express = require('express');
 const router = express.Router();
 
+// User controller methods
 const { getUsers, getUserById, postUser } = require('../controllers/userController');
 
 // GET /users - Gets a list of every user

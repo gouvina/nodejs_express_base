@@ -1,7 +1,7 @@
-// Global Environment Variables
+// Global environment variables
 require('dotenv').config();
 
-// Global dependencies
+// Third-party dependencies
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -10,10 +10,11 @@ const cors = require('cors');
 // Local dependencies
 const routes = require('./constants/routes');
 const usersRouter = require('./routes/users');
-const { CORS_ORIGIN_WHITELIST, DATABASE_URL } = require('./config');
+const { CORS_ORIGIN_WHITELIST } = require('./config');
 
 // CORS options
 const corsOptions = {
+    credentials: true,
     origin(origin, callback) {
       if (CORS_ORIGIN_WHITELIST.indexOf(origin) !== -1 || !origin) {
         callback(null, true);
@@ -21,7 +22,6 @@ const corsOptions = {
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true,
   };
 
 // Express app rules
