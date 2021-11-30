@@ -14,15 +14,15 @@ const { CORS_ORIGIN_WHITELIST } = require('./config');
 
 // CORS options
 const corsOptions = {
-    credentials: true,
-    origin(origin, callback) {
-      if (CORS_ORIGIN_WHITELIST.indexOf(origin) !== -1 || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-  };
+  credentials: true,
+  origin(origin, callback) {
+    if (CORS_ORIGIN_WHITELIST.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
 // Express app rules
 const app = express();

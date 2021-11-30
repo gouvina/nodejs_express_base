@@ -1,6 +1,5 @@
 const routes = {
-    USERS: '/users',
-  };
-  
-  module.exports = routes;
-  
+  USERS: '/users',
+};
+
+module.exports = routes;
