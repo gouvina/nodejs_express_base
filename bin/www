@@ -3,7 +3,7 @@
 // Module dependencies.
 const http = require('http');
 const debug = require('debug')('base-nodejs-express:server');
-const app = require('../app');
+const app = require('../src/app');
 
 // Aux functions
 // Normalize a port into a number, string, or false.
