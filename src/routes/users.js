@@ -6,16 +6,12 @@ const router = express.Router();
 
 // User controller methods
 const {
-  getUsers,
-  getUserById,
+  getUser,
   postUser,
 } = require('../controllers/user.controller');
 
-// GET /users - Gets a list of every user
-router.get('/', getUsers);
-
-// GET /users/id - Gets an object for the user with id :id
-router.get('/:id', getUserById);
+// GET /users - Gets list of users
+router.get('/', getUser);
 
 // POST /users - Creates a new user
 router.post('/', postUser);
