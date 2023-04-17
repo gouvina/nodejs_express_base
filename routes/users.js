@@ -9,7 +9,7 @@ const {
   getUsers,
   getUserById,
   postUser,
-} = require('../controllers/userController');
+} = require('../controllers/user.controller');
 
 // GET /users - Gets a list of every user
 router.get('/', getUsers);
