@@ -9,7 +9,7 @@ const cors = require('cors');
 
 // Local dependencies
 const routes = require('./constants/routes');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./user/user.router');
 const { CORS_ORIGIN_WHITELIST } = require('./config');
 
 // CORS options

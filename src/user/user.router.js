@@ -7,13 +7,21 @@ const router = express.Router();
 // User controller methods
 const {
   getUser,
-  postUser,
-} = require('../controllers/user.controller');
+  createUser,
+  updateUser,
+  deleteUser,
+} = require('./user.controller');
 
 // GET /users - Gets list of users
 router.get('/', getUser);
 
 // POST /users - Creates a new user
-router.post('/', postUser);
+router.post('/', createUser);
+
+// PUT /users - Gets list of users
+router.put('/', updateUser);
+
+// DELETE /users - Gets list of users
+router.delete('/', deleteUser);
 
 module.exports = router;
