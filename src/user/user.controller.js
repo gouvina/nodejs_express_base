@@ -1,6 +1,6 @@
 // Local dependencies
 const userService = require('./user.service');
-const { e500 } = require('../constants/errors');
+const { e500 } = require('../_constants/errors');
 
 // Get list of users
 exports.getUser = async (req, res, next) => {

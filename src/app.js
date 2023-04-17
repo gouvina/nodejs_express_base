@@ -8,9 +8,9 @@ const logger = require('morgan');
 const cors = require('cors');
 
 // Local dependencies
-const routes = require('./constants/routes');
+const routes = require('./_constants/routes');
 const usersRouter = require('./user/user.router');
-const { CORS_ORIGIN_WHITELIST } = require('./config');
+const { CORS_ORIGIN_WHITELIST } = require('./_config');
 
 // CORS options
 const corsOptions = {
