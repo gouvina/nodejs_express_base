@@ -9,6 +9,6 @@ mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.url = process.env.DATABASE_URL;
-db.users = require("../user/user.model")(mongoose);
+db.User = require("../user/user.model")(mongoose);
 
 module.exports = db;

@@ -1,3 +1,6 @@
+// Local dependencies
+const db = require("../_db");
+const User = db.User;
 
 // Get list of users
 exports.getUser = async () => {
@@ -5,8 +8,12 @@ exports.getUser = async () => {
 };
 
 // Create new user
-exports.createUser = async () => {
-  return {};
+exports.createUser = async (body) => {
+  const user = new User({
+    email: body.email,
+    password: body.password,
+  });
+  return await user.save(user);
 };
 
 // Update user based on id

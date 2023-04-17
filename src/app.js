@@ -35,6 +35,12 @@ app.use(cors(corsOptions));
 // Routes
 app.use(routes.USERS, usersRouter);
 
+// Error handling
+app.use((err, req, res, next) => {
+  console.log('ERROR:' + JSON.stringify(err));
+  res.json(err);
+})
+
 // Database
 const db = require("./_db");
 db.mongoose

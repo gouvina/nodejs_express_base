@@ -1,6 +1,6 @@
 // Local dependencies
 const userService = require('./user.service');
-const { e500 } = require('../_constants/errors');
+const { e400, e500 } = require('../_constants/errors');
 
 // Get list of users
 exports.getUser = async (req, res, next) => {
@@ -13,9 +13,17 @@ exports.getUser = async (req, res, next) => {
 };
 
 // Create new user
-exports.createUser = (req, res, next) => {
+exports.createUser = async (req, res, next) => {
   try {
-    const user = userService.createUser();
+    // Validate request
+    if (
+      !req.body.email || 
+      !req.body.password
+    ) next(e400);
+
+    // Create user after validation and return result
+    const user = await userService.createUser(req.body);
+    console.log(user);
     res.json(user);
   } catch (error) {
     next(e500);
