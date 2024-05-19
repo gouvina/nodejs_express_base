@@ -5,8 +5,8 @@ Base Project for generating Backend APIs using Nodejs and Express for HTTP Serve
 Depending on what version of the base project is needed (and which features), different groups of features have been organized in the next branches:
 - `main` - Basic version.
 - `mongo` - Simple database management using `mongodb`.
-- `jwt` - Simple authentication management using a `mongo` database and `jwt` tokens.
-- `postgres` - Simple database management using `postgresql`.
+- `jwt` - Simple authentication management using a `mongo` database and `jwt` tokens. *(currently not available)*
+- `postgres` - Simple database management using `postgresql` *(currently not available)*
 
 **Current Branch:** `main`
 
