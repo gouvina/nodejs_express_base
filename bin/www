@@ -5,7 +5,8 @@ const http = require('http');
 const debug = require('debug')('base-nodejs-express:server');
 const app = require('../src/app');
 
-// Aux functions
+// AUX FUNCTIONS
+
 // Normalize a port into a number, string, or false.
 function normalizePort(val) {
   const port = parseInt(val, 10);
@@ -30,7 +31,8 @@ app.set('port', port);
 // Create HTTP server.
 const server = http.createServer(app);
 
-// Listening functions
+// LISTENING FUNCTIONS
+
 // Event listener for HTTP server "error" event.
 function onError(error) {
   if (error.syscall !== 'listen') {

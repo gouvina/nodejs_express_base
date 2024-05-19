@@ -11,20 +11,20 @@ Depending on what version of the base project is needed (and which features), di
 **Current Branch:** `main`
 
 ## Features
-This version of the base project supports the next features:
+This version of the base project supports the following features:
 - HTTP server middleware management
 - CORS Validation
 - Error Handling
 - Constants Management
 
 ## Requirements
-In order to run the project, it is needed to have downloaded and installed the following software:
+In order to run the project, the following software is needed:
 - Node.js - https://nodejs.org/en/download/
 - Nodemon - `npm install -g nodemon` <br>
 (recommended, for debugging)
 
 ## Setup & Run
-In order to run the project, it is needed to follow the next steps, taking into account they are designed to run the project *locally*. URL's should change otherwise:
+In order to run the project follow the next steps, taking into account they are designed to run the project *locally*. URL's should change otherwise:
 1. Clone repository
 2. Create `.env` file in root folder of project with the following variables:
     - PORT=3000 - *(Or whatever is best)*
