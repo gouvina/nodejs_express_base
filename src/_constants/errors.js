@@ -1,15 +1,15 @@
 const errors = {
   e400: {
     status: 400,
-    message: 'BAD REQUEST',
+    code: 'BAD REQUEST',
   },
   e404: {
     status: 404,
-    message: 'NOT FOUND',
+    code: 'NOT FOUND',
   },
   e500: {
     status: 500,
-    message: 'INTERNAL SERVER ERROR',
+    code: 'INTERNAL SERVER ERROR',
   },
 };
 
